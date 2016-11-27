@@ -56,7 +56,6 @@ var InfoBox = React.createClass({
             cache: false,
             success: function (data) {
                 this.setState({data: data});
-                //console.log(data);
             }.bind(this),
             error: function (xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
@@ -71,7 +70,6 @@ var InfoBox = React.createClass({
             data: text,
             success: function(data) {
                 this.setState({data: data});
-                //console.log(data);
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
@@ -87,11 +85,7 @@ var InfoBox = React.createClass({
     handleSubmit: function (e,text) {
         e.preventDefault();
         this.sendToServer(text);
-        //alert(text);
         this.loadDataFormServer();
-
-        //alert(text);
-        //alert(1);
     },
     render: function () {
         return (
@@ -151,7 +145,6 @@ var InfoBtn = React.createClass({
         $("input").css({"background-color": "#fff"});
     },
     handleEditState: function (e) {
-        //e.preventDefault();
         this.setState({editBtn: !this.state.editBtn});
         parentEditStatus = true;
         var inputNodesList = $("input[type='text']");
