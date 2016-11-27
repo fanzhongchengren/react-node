@@ -1,1 +1,1 @@
-基于node环境下的react.js应用
+node.js + react.js
