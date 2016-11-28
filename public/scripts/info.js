@@ -85,7 +85,7 @@ var InfoBox = React.createClass({
     handleSubmit: function (e,text) {
         e.preventDefault();
         this.sendToServer(text);
-        //实时性（可优化）
+        //reduce req can optimize
         this.loadDataFormServer();
     },
     render: function () {
